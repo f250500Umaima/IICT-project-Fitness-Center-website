@@ -1,3 +1,4 @@
+// Main configuration for product data
 /* script.js
    Full interactive behavior:
    - Signup form validation & storage
@@ -548,3 +549,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* End DOMContentLoaded */
 });
+
