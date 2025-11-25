@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fitness Centre</title>
+
+    <!-- Link to external CSS (provided next) -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER (keeps original template structure: left / mid / right) -->
+    <header class="header" role="banner">
+        <div class="left">
+            <img src="https://cdn.vectorstock.com/i/750p/95/42/gym-body-fitness-logo-man-and-woman-athletic-vector-47899542.avif"
+                alt="Fitness centre logo" />
+            <div>Fitness Centre</div>
+        </div>
+       
+        <nav class="mid" role="navigation" aria-label="Main navigation">
+            <ul class="navbar">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#calculator">Fitness Calculator</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="right">
+            <button class="btn" id="signupBtn">Sign Up</button>
+            <button class="btn" id="callBtn">Call Us Now</button>
+            <button class="btn" id="emailBtn">Email Us</button>
+        </div>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero" aria-label="Hero">
+        <div class="hero-inner">
+            <h1>Transform Your Body. Transform Your Life.</h1>
+            <p>Join our fitness community — expert trainers, modern equipment, and personalised programs.</p>
+            <div class="hero-cta">
+                <button class="btn" id="joinNowBtn">Get Membership</button>
+                <a class="btn secondary" href="#offers">See Offers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN: offers + signup form side-by-side (matches earlier template layout) -->
+    <main>
+
+        <section class="panel-row">
+
+            <!-- OFFERS (left panel visually similar to original 'offers') -->
+            <aside class="offers" id="offers" aria-labelledby="offersHeading">
+                <h2 id="offersHeading">Special Offers & Promotions</h2>
+
+                <div class="offer-grid">
+                    <article class="offer-card">
+                        <h3>50% OFF — Annual Membership</h3>
+                        <p>Limited-time offer. Pay one year, get one year half price.</p>
+                    </article>
+
+                    <article class="offer-card">
+                        <h3>Buy 2 Accessories — Get 1 Free</h3>
+                        <p>Applies to selected accessories in our store.</p>
+                    </article>
+
+                    <article class="offer-card">
+                        <h3>Free Trainer Month</h3>
+                        <p>Premium members get 1 month with a personal trainer.</p>
+                    </article>
+                </div>
+
+                <div class="promo-badge">
+                    <strong>New Member Bonus:</strong> Free fitness assessment.
+                </div>
+            </aside>
+
+            <!-- SIGNUP FORM (keeps look & style of your template form; enhanced fields) -->
+            <section class="form" id="signup" aria-labelledby="signupHeading">
+                <div class="form1">
+                    <h2 id="signupHeading">Join Our Fitness Centre Now</h2>
+                </div>
+
+                <form id="signupForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" placeholder="Full name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email address" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone number" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="date" id="birthdate" name="birthdate" placeholder="Birthdate" />
+                    </div>
+
+                    <div class="form-group">
+                        <select id="gender" name="gender">
+                            <option value="">Gender (optional)</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other / Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="membershipPlan" name="membershipPlan" required>
+                            <option value="basic">Basic — Monthly</option>
+                            <option value="standard">Standard — 3 Months</option>
+                            <option value="premium">Premium — Annual (recommended)</option>
+                        </select>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <label class="consent">
+                            <input type="checkbox" id="terms" required />
+                            <br> I agree to the Terms & Conditions and Privacy Policy.
+                        </label>
+                    </div>
+
+                    <div class="form-cta">
+                        <button type="submit" class="btn" id="submitSignup">Submit</button>
+                        <button type="reset" class="btn secondary">Reset</button>
+                    </div>
+
+                    <div id="signupMessage" role="status" aria-live="polite"></div>
+                </form>
+            </section>
+        </section>
+
+        <!-- PRODUCTS SECTION (professional product grid with images) -->
+        <section id="products" class="products" aria-labelledby="productsHeading">
+            <h2 id="productsHeading">Gym Products for Sale</h2>
+
+            <div class="product-grid" id="productGrid">
+
+                <!-- Product entries (12 items). Replace image links with your local images if desired. -->
+                <article class="product" data-id="1" data-name="Adjustable Dumbbells" data-price="3500">
+                    <img src="https://www.verywellfit.com/thmb/jVyE3iPaFzNfvLmKbwT-x9bpvug=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/vwt-ativafit-66-lb-adjustable-dumbbell-set-lance-scardino-18-e1e80de2b5804604b63a4554b7a48aa8.jpeg"
+                        alt="Adjustable dumbbells">
+                    <h3>Adjustable Dumbbells</h3>
+                    <p class="price">Rs. 3,500</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details"
+                            aria-label="View details of Adjustable Dumbbells">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="2" data-name="Whey Protein (2kg)" data-price="5500">
+                    <img src="https://sportsone.com.pk/wp-content/uploads/2024/05/Anabolic-Iso-Whey.png"
+                        alt="Whey protein">
+                    <h3>Whey Protein (2kg)</h3>
+                    <p class="price">Rs. 5,500</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="3" data-name="Premium Yoga Mat" data-price="1200">
+                    <img src="https://spartanfitness.ca/cdn/shop/files/VO3-9040.png?v=1743903327&width=5000"
+                        alt="Yoga mat">
+                    <h3>Premium Yoga Mat</h3>
+                    <p class="price">Rs. 1,200</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="4" data-name="Leather Gym Gloves" data-price="1800">
+                    <img src="https://ltrevfit.com/cdn/shop/products/GlovesForKettlebellWorkout_c3725678-3450-424f-8075-876497d0fc52.jpg?v=1613446101&width=823"
+                        alt="Gym gloves">
+                    <h3>Leather Gym Gloves</h3>
+                    <p class="price">Rs. 1,800</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="5" data-name="Electric Treadmill" data-price="85000">
+                    <img src="https://everfit.com.au/cdn/shop/products/TMILL-CHI-480-MSG-00.jpg?v=1755761997"
+                        alt="Treadmill">
+                    <h3>Electric Treadmill</h3>
+                    <p class="price">Rs. 85,000</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="6" data-name="Muscle Gain Combo" data-price="6500">
+                    <img src="https://mimovement.com/cdn/shop/files/MuscleGainStarter_695x695.jpg?v=1689356343"
+                        alt="Supplements">
+                    <h3>Muscle Gain Combo</h3>
+                    <p class="price">Rs. 6,500</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="7" data-name="Resistance Bands Set" data-price="2800">
+                    <img src="https://3dactive.com/cdn/shop/products/TubeResistanceBands.jpg?v=1669906928&width=700"
+                        alt="Resistance bands">
+                    <h3>Resistance Bands Set</h3>
+                    <p class="price">Rs. 2,800</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="8" data-name="Shaker Bottle" data-price="600">
+                    <img src="https://jackednutrition.pk/cdn/shop/files/shakerblack_1.webp?v=1753434843&width=500"
+                        alt="Shaker bottle">
+                    <h3>Shaker Bottle</h3>
+                    <p class="price">Rs. 600</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="9" data-name="Bench Press Machine" data-price="52000">
+                    <img src="https://m.media-amazon.com/images/I/71JpcGtHj0L._AC_SL500_.jpg"
+                        alt="Bench press">
+                    <h3>Bench Press Machine</h3>
+                    <p class="price">Rs. 52,000</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="10" data-name="Kettlebell (20kg)" data-price="4000">
+                    <img src="https://titan.fitness/cdn/shop/files/422155_03.jpg?v=1749568879&width=1445"
+                        alt="Kettlebell">
+                    <h3>Kettlebell (20kg)</h3>
+                    <p class="price">Rs. 4,000</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="11" data-name="Skipping Rope (Speed)" data-price="800">
+                    <img src="https://imagely.mirafit.co.uk/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/i/mirafit-aluminium-handle-skipping-rope.jpg"
+                        alt="Skipping rope">
+                    <h3>Skipping Rope (Speed)</h3>
+                    <p class="price">Rs. 800</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+                <article class="product" data-id="12" data-name="Gym Towel (Microfiber)" data-price="900">
+                    <img src="https://www.gearpatrol.com/wp-content/uploads/sites/2/2023/02/best-gym-towels-lead-1676397829-jpg.webp?resize=1920,960"
+                        alt="Gym towel">
+                    <h3>Gym Towel (Microfiber)</h3>
+                    <p class="price">Rs. 900</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn outline view-details">Details</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- product controls -->
+            <div class="product-controls">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect">
+                    <option value="popular">Most Popular</option>
+                    <option value="priceLow">Price: Low → High</option>
+                    <option value="priceHigh">Price: High → Low</option>
+                </select>
+
+                <label for="filterSelect">Category:</label>
+                <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="equipment">Equipment</option>
+                    <option value="supplements">Supplements</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- BROCHURE -->
+        <section id="brochure" class="brochure" aria-labelledby="brochureHeading">
+            <h2 id="brochureHeading">Download Our Gym Brochure</h2>
+            <p>Get membership prices, training plans, and diet charts in a handy PDF.</p>
+            <a href="files/gym-brochure.pdf" class="btn" download>Download Brochure (PDF)</a>
+        </section>
+
+    </main>
+
+    <!-- CART SIDEBAR (hidden by default; script toggles 'open' class) -->
+    <aside id="cartSidebar" class="cart" aria-label="Shopping cart" aria-hidden="true">
+        <h3>Your Cart</h3>
+        <div id="cartList" class="cart-list">
+            <p class="empty">Your cart is empty.</p>
+        </div>
+        <div class="cart-summary">
+            <div>Total: <strong id="cartTotal">Rs. 0</strong></div>
+            <div class="cart-actions">
+                <button class="btn" id="checkoutBtn">Checkout</button>
+                <button class="btn outline" id="clearCartBtn">Clear</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2025 Fitness Centre — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript (provided next) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
